@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MY TO DO LIST</title>
+
+  <!-- Inter font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="card header-card" aria-hidden>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 7h14M7 11h10M5 15h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h1>MY TO DO LIST</h1>
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="controls">
+        <input id="taskText" type="text" placeholder="Add new task..." />
+        <input id="taskDate" type="date" />
+        <button id="addBtn">Add task</button>
+      </div>
+
+      <div class="list" id="taskList"></div>
+      <div class="empty" id="emptyMsg">No tasks yet — add one above 👍</div>
+    </main>
+  </div>
+
+  <!-- popups -->
+  <div id="successPopup" class="popup success" style="display:none" role="status" aria-live="polite">
+    <div class="icon">🎉</div>
+    <div class="text"><div class="title">Nice work!</div><div class="subtitle">keep up the goodwork</div></div>
+  </div>
+
+  <div id="angryPopup" class="popup angry" style="display:none" role="status" aria-live="assertive">
+    <div class="icon">😡</div>
+    <div class="text"><div class="title">Uh oh — Time's almost up!</div><div class="subtitle">This task is nearing its due date. Finish it now!</div></div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
